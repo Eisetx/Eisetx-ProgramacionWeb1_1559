@@ -1,0 +1,37 @@
+#encabezado{
+    color:white;
+    background-color: black;
+}
+
+
+
+
+.fondo--imagen{
+    background-image: radial-gradient(ellipse, rgba(255, 0, 255, 0.139), rgba(0, 255, 255, 0.212)), url(../iamegens/esnupi.png);
+    height: 2000px;
+    width: 1000px;
+    border:1px solid black;
+
+    /*Backgroun size (cover,update, contain y width(px) height(px)
+    Especifica el tamaño de la imagen de fondo*/
+    background-size:  600px 400px;
+
+    /*background-repeat (repeat, repeat-x, repeat-y y no-repeat*/
+    background-repeat: no-repeat;
+
+    /*background-position (top, left, right, bottom y center
+    Establece la posicion inicial de la imagen*/
+    background-position: top left;
+
+    /*background-attachment (scroll y fixed)
+    Esta se utiliza para que la imagen se quede fija en su contenedor cuando un usuario se desplaza por la pagina*/
+    background-attachment: scroll;
+}
+
+.fondo--imagen1{
+    /*background: (image) (position) / (size) (repeat) (attachment) (color)*/
+    background: url(../iamegens/dinovolcan.webp) center / contain no-repeat scroll red;
+    height: 1100px;
+    width: 1100px;
+    border:1px solid black;
+}
