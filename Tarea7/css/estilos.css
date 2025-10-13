@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+}
+
+article{
+    background-color:cadetblue;
+}
+
+.estilos--internos{
+    background-color: red;
+}
+
+#cabezon{
+    color: orange;
+}
