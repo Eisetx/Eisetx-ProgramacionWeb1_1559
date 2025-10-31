@@ -1,0 +1,59 @@
+#plano{
+    color: white;
+    background-color: black;
+    height: 80px;
+    /*El relleno es el espacio entre el contenido de un elemento y su borde
+    Se aplican las propiedades en esentido horario: top, right, bottom y left*/
+    /*padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-top: 12px;*/
+
+    padding: 10px 20px 30px 40px;
+    /*Si solo ponemos dos propiedades se aplican a arriba y lado. 
+    Si ponemos 3 propiedades, la primera es top ,la segunda es* right, (y left) y la 3ra es boom*/
+    /*Margin:Es el espacio entre el borde de un elemento con los demás elementos HTML, tiene las mismas propiedades que padding*/
+
+    margin: 10px 30px 50px 70px ;
+
+    /*El borde es el contorno visual al rededor de nuestro relleno y contenido de un elemento
+    Puede tomar los siguientes valores border-style:(solid,dotted, dashed,double, groove,ridge, inset, outset, hidden, none)*/
+
+    border: 10px dotted rebeccapurple;
+    border-top-style: solid;
+    border-radius: 40%;
+
+    /*Se puede utilizar para crear efectos de sombra al rededor del borde de un elemento, se debnen especificar los vzlores para el
+    desplazamiento horizontal, desplazamienot vertical, radio de desenfoque, radio de propagacion y color*/
+    box-shadow: -5px -5px 10px 5px rebeccapurple;
+
+    /*border_box se utiliza para que rellenos, margenes, y bordes no agreguen espacio extra a lo que se declaro en el ancho y alto
+    de nuestro contenedor*/
+    box-sizing: content-box; 
+
+}
+
+.introduction{
+    color:blueviolet;
+    background-color: greenyellow;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 3px groove yellow;
+    box-shadow: 5px 5px 10px 5px orange;
+    box-sizing: border-box;
+}
+.introduction p{
+    border: 1px solid yellow;
+    height: 50px;
+    width: 200px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.introduction span{
+    border: 1px solid yellow;
+    height: 50px;
+    padding-top: 10px;
+    
+}
