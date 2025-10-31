@@ -1,6 +1,6 @@
-#plano{
+#header{
     color: white;
-    background-color: black;
+    background-color: lightblue;
     height: 80px;
     /*El relleno es el espacio entre el contenido de un elemento y su borde
     Se aplican las propiedades en esentido horario: top, right, bottom y left*/
@@ -9,51 +9,112 @@
     padding-right: 20px;
     padding-top: 12px;*/
 
-    padding: 10px 20px 30px 40px;
+    padding: 0px 20px 30px 150px;
     /*Si solo ponemos dos propiedades se aplican a arriba y lado. 
     Si ponemos 3 propiedades, la primera es top ,la segunda es* right, (y left) y la 3ra es boom*/
     /*Margin:Es el espacio entre el borde de un elemento con los demás elementos HTML, tiene las mismas propiedades que padding*/
 
-    margin: 10px 30px 50px 70px ;
+    margin: 100px 30px 50px 70px;
 
     /*El borde es el contorno visual al rededor de nuestro relleno y contenido de un elemento
     Puede tomar los siguientes valores border-style:(solid,dotted, dashed,double, groove,ridge, inset, outset, hidden, none)*/
 
-    border: 10px dotted rebeccapurple;
-    border-top-style: solid;
+    border: 15px groove rgb(26, 156, 91);
+
     border-radius: 40%;
+    /*Se puede utilizar para crear efectos de sombra al rededor del borde de un elemento, se deben especificar los valores para el
+     desplazamiento horizontal, desplazamiento vertical, radio de desenfoque, radio de propagación y color */
+    box-shadow: -5px -5px 10px red;
 
-    /*Se puede utilizar para crear efectos de sombra al rededor del borde de un elemento, se debnen especificar los vzlores para el
-    desplazamiento horizontal, desplazamienot vertical, radio de desenfoque, radio de propagacion y color*/
-    box-shadow: -5px -5px 10px 5px rebeccapurple;
-
-    /*border_box se utiliza para que rellenos, margenes, y bordes no agreguen espacio extra a lo que se declaro en el ancho y alto
-    de nuestro contenedor*/
-    box-sizing: content-box; 
-
+    /*(borderbox)Esto hace que las propiedades no modifiquen el tamaño de la caja */
+    box-sizing: border-box;
 }
 
 .introduction{
-    color:blueviolet;
-    background-color: greenyellow;
-    height: 200px;
-    padding: 10px;
-    margin: 10px;
-    border: 3px groove yellow;
-    box-shadow: 5px 5px 10px 5px orange;
-    box-sizing: border-box;
-}
-.introduction p{
-    border: 1px solid yellow;
-    height: 50px;
-    width: 200px;
-    padding-top: 10px;
+    color:rgb(34, 0, 66);
+    background-color: rgb(55, 15, 195);
+
+    padding:10px;
+    height: 300px;
+    width: 1000px;
+    margin: 20px;
+    border: 10px ridge darkgreen;
+    border-radius: 5%;
+    box-shadow: 5px 5px 10px darkblue;
     box-sizing: border-box;
 }
 
-.introduction span{
-    border: 1px solid yellow;
-    height: 50px;
-    padding-top: 10px;
+.introduction p{
+    border: 1px double darkgoldenrod;
+    height: 100px;
+    width: 500px;
     
+}
+
+.introduction span{
+    border: 1px, solid, gray;
+    height: 50px;
+    width: 100px;
+    /*Con los padding puedes modificar el tamaño de la "caja" de un elemento el línea*/
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.texto-fuente{
+    background-color: rgb(2, 1, 2);
+    border:3px,dashed, whitesmoke;
+    color: rgb(145, 180, 245);
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.propiedades--texto{
+    border: 2px,dotted,white;
+    padding: 5px;
+    margin:5px;
+    box-sizing: border-box;
+}
+
+.propiedades--texto h2{
+    color: floralwhite;
+    text-align: center;
+    border: 2px double silver;
+    text-transform: uppercase;
+    text-decoration: line-through ;
+    text-shadow: 2px 2px 2px blue;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    font-family: "Playwrite DE SAS";
+    font-size: xx-large;
+    font-weight:700;
+    font-style: italic;
+}
+.propiedades--texto p{
+    text-align: justify;
+    line-height: 1.5;
+}
+.propiedades--fuente{
+    border: 2px,dotted,white;
+    padding: 5px;
+    margin:5px;
+    box-sizing: border-box;
+}
+
+.propiedades--fuente h2{
+    color: floralwhite;
+    text-align: center;
+    border: 2px double silver;
+    text-transform: uppercase;
+    text-decoration: line-through ;
+    text-shadow: 2px 2px 2px blue;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    font-family: "Yarndings 20";
+    
+}
+
+.propiedades--fuente p{
+    text-align: justify;
+    line-height: 1.5;
 }
