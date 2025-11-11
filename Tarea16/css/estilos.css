@@ -1,0 +1,67 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to top, rgb(169, 3, 3), rgb(20, 34, 184) );
+    color: white;
+    
+}
+
+.seccion-productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1em;
+    padding: 0.5em;
+    justify-content: space-evenly;
+}
+.producto{
+    border: 0.2em solid rgb(28, 0, 128);
+    box-shadow: 0.2em 0.2em 0.2em rgb(125, 31, 5);
+    display: flex;
+    padding: 0.5em;
+    max-width: 20em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.producto img{
+    width: 100%;
+    height: 50%;
+    object-fit: fill;
+    box-shadow: 0.2em 0.2em 0.2em black;
+}
+.precio{
+    font-weight: bolder;
+}
+.producto button:hover{
+    background-color: rgb(249, 7, 7);
+    color: purple;
+    width: 5em;
+    height: 2em;
+}
+
+.carrusel-opiniones{
+    background-image: radial-gradient(circle, rgb(0, 30, 255), white);
+    display: flex;
+    gap:3em;
+    box-sizing: border-box;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.opinion{
+    border: 0.2em dashed rgb(0, 0, 0);
+    box-shadow:  0.2em 0.2em 0.2em darkviolet;
+    padding: 0.2em;
+    flex: 0 0 50em;
+    /*flex grow(crezcan al tamaño de su contenedor) flex shrink (comprimir al tamaño de su contenedor ajustan) tamaño */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: end;
+  
+}
