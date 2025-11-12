@@ -1,0 +1,63 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: radial-gradient(circle, red, white);
+}
+
+.contenedor-grid{
+    border: 0.2em solid purple;
+    padding: 0.2em;
+    /*Convertir el contenedor a cuadrícula*/
+    display: grid;
+    width: 30em;
+    height: 30em;
+    /*Se declaran las columnas (tamaño de la cuadrícula)*/
+    /*Aceptan valores fijos relativos, porcentajes, automático y se puede utilizar fr para definir una fracción del espacio disponible */
+    grid-template-columns: 5em 5em 5em;
+    /*Con cada auto declaro una columna diferente */
+    /*se declaran los renglones o fila de la cuadricula*/
+    grid-template-rows: 10em 10em;
+    /*Alinear items en la fila (eje en linea) (start, end, center, stretch) */
+    justify-items: center;
+    /*Alinear items en la columna (eje en bloque) (start, end, center, stretch) */
+    align-items: center;
+    /*shorthand: place-items: stretch stretch*/
+    /*Alinear la cuadrícula a lo largo del eje en linea (fila)
+    (start, end, center, stretch, space.between, space-around y space-evenly)*/
+    justify-content: start;
+    /*Alinear la cuadrícula a lo largo del eje en bloque (columna)
+    (start, end, center, stretch, space.between, space-around y space-evenly)*/
+    align-content: space-around;
+    gap: 2em;
+
+}
+
+.objeto-grid{
+    background-color: greenyellow;
+    border: 0.1em solid yellow;
+}
+
+.contenedor-grid-1{
+    border: 0.2em solid rgb(192, 42, 95);
+    padding: 0.2em;
+    /*Convertir el contenedor a cuadrícula*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.objeto-grid-1{
+    background-color: rgb(211, 124, 70);
+    border: 0.1em solid rgb(94, 125, 175);
+}
+.objeto-grid-1:nth-child(2){
+    color: white;
+    grid-column: 1 / 2;
+    grid-row: 1;
+
+}
