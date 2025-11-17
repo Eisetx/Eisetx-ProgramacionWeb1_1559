@@ -1,0 +1,286 @@
+/* --- Variables Globales (Custom Properties) --- */
+:root {
+    --font-principal: 'Nunito', sans-serif;
+    --color-primario: #4CAF50; /* Verde principal */
+    --color-primario-oscuro: #006400; /* Verde oscuro para navegación */
+    --color-secundario: #FFC107; /* Amarillo de acento */
+    --color-terciario: #FF5722; /* Naranja para botones y títulos */
+    --color-fondo: #f7fdf7; /* Un blanco hueso muy claro */
+    --color-texto: #333;
+    --color-blanco: #ffffff;
+    --color-gris-claro: #ddd;
+    --color-sombra: rgba(0, 0, 0, 0.08);
+    --border-radius-suave: 15px;
+    --transicion-suave: all 0.3s ease-in-out;
+}
+
+/* --- Estilos Generales y Fuente --- */
+body {
+    font-family: var(--font-principal); 
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: var(--color-primario-oscuro);
+    font-weight: 700;
+}
+
+/* --- Encabezado --- */
+header {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 5px solid var(--color-secundario);
+}
+header h1 {
+    color: var(--color-blanco);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+
+/* --- Estilos del Menú de Navegación --- */
+.nav-menu {
+    background-color: var(--color-primario-oscuro);
+    padding: 10px 0;
+    text-align: center;
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.nav-menu li {
+    margin: 0 15px;
+}
+.nav-menu a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: var(--transicion-suave);
+}
+.nav-menu a:hover {
+    background-color: var(--color-primario);
+}
+
+/* Estilo para la página activa en el menú */
+.nav-menu a.active {
+    background-color: var(--color-secundario); /* Color amarillo de acento */
+    color: var(--color-texto); /* Texto oscuro para que se lea bien */
+    font-weight: 700;
+}
+
+
+/* --- Contenedor Principal (GRID) --- */
+.grid-container {
+    display: grid;
+    
+    /* 1. MÓVIL (Mobile-First): 1 columna por defecto */
+    grid-template-columns: 1fr;
+    
+    gap: 25px;
+    padding: 25px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* 2. TABLET: 2 columnas */
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 3. ESCRITORIO: 3 columnas (Tu petición) */
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- Tarjetas (Items del Grid) --- */
+.grid-item {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris-claro);
+    border-radius: var(--border-radius-suave);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--color-sombra);
+    transition: var(--transicion-suave);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px var(--color-sombra);
+}
+
+/* Botón de entradas */
+.btn-ticket {
+    background-color: var(--color-terciario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transicion-suave);
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-ticket:hover {
+    background-color: #E64A19; /* Un tono más oscuro de naranja */
+    transform: scale(1.05);
+}
+
+/* --- Sección para FOTOS --- */
+.foto-animal {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+}
+.foto-animal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+/* --- Info de Hábitat y Cuidados (en la tarjeta) --- */
+.info-animal {
+    margin-top: 15px;
+    text-align: left;
+    padding: 10px;
+    background-color: var(--color-fondo);
+    border-radius: 8px;
+    border-left: 5px solid var(--color-secundario);
+}
+.info-animal strong {
+    color: var(--color-primario-oscuro);
+    font-size: 1.1rem;
+    display: inline-block; /* Para que el párrafo se ponga al lado */
+    margin-right: 5px;
+}
+.info-animal p {
+    margin: 0;
+    font-size: 0.95rem;
+    display: inline; /* Para que continúe en la misma línea */
+}
+
+/* --- Estilos para las páginas de contenido (precios, etc.) --- */
+.pagina-contenido {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--color-blanco);
+    border-radius: var(--border-radius-suave);
+    box-shadow: 0 5px 15px var(--color-sombra);
+    text-align: center;
+    border-top: 5px solid var(--color-primario);
+}
+.pagina-contenido h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+.tabla-precios {
+    width: 100%;
+    max-width: 700px;
+    margin: 25px auto;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+.tabla-precios th, .tabla-precios td {
+    padding: 15px;
+    border: 1px solid var(--color-gris-claro);
+    text-align: left;
+}
+.tabla-precios th {
+    background-color: #E0F7FA;
+    color: var(--color-primario-oscuro);
+    font-weight: 700;
+}
+.tabla-precios tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.mapa-placeholder, .mapa-zoo-img {
+    width: 100%;
+    border: 1px solid var(--color-gris-claro);
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.mapa-zoo-img {
+    height: 500px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.mapa-zoo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+
+/* ======== /* NUEVO: Estilos para Títulos de Categorías */ ======== */
+.categoria-animales {
+    /* Esta sección envuelve cada categoría */
+    margin-top: 30px;
+}
+
+.categoria-animales h2 {
+    /* Este es el título de la categoría (ej. Carnívoros) */
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-blanco); /* Texto blanco */
+    padding: 15px;
+    border-radius: var(--border-radius-suave);
+    max-width: 1200px; /* Ancho del grid */
+    margin: 20px auto 0 auto; /* Centrado */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* Colores para cada categoría */
+#carnivoros {
+    background-color: var(--color-terciario); /* Naranja/Rojo */
+}
+#herviboros {
+    background-color: var(--color-primario); /* Verde */
+}
+#omnivoros {
+    background-color: #5D76A9; /* Un azul más apagado y elegante */
+}
+
+/* Ajuste para que el grid no tenga un margen superior extra */
+.categoria-animales .grid-container {
+    margin-top: 0;
+    padding-top: 25px;
+    /* Hereda el max-width, así que está bien */
+}
+/* ========================================================== */
+
+
+/* --- Pie de Página --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #aaa;
+    margin-top: 20px;
+}
