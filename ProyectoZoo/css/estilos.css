@@ -1,15 +1,15 @@
 /* --- Variables Globales (Custom Properties) --- */
 :root {
     --font-principal: 'Nunito', sans-serif;
-    --color-primario: #4CAF50; /* Verde principal */
-    --color-primario-oscuro: #006400; /* Verde oscuro para navegación */
+    --color-primario: #2E7D32; /* Verde más oscuro y profesional */
+    --color-primario-oscuro: #1B5E20; /* Verde aún más oscuro para contraste */
     --color-secundario: #FFC107; /* Amarillo de acento */
-    --color-terciario: #FF5722; /* Naranja para botones y títulos */
+    --color-terciario: #F57C00; /* Naranja más refinado */
     --color-fondo: #f7fdf7; /* Un blanco hueso muy claro */
     --color-texto: #333;
     --color-blanco: #ffffff;
     --color-gris-claro: #ddd;
-    --color-sombra: rgba(0, 0, 0, 0.08);
+    --color-sombra: rgba(0, 0, 0, 0.06); /* Sombra más sutil */
     --border-radius-suave: 15px;
     --transicion-suave: all 0.3s ease-in-out;
 }
@@ -46,7 +46,7 @@ header h1 {
 /* --- Estilos del Menú de Navegación --- */
 .nav-menu {
     background-color: var(--color-primario-oscuro);
-    padding: 10px 0;
+    padding: 12px 0; /* Un poco más de espacio vertical */
     text-align: center;
     position: sticky; 
     top: 0;
@@ -60,14 +60,15 @@ header h1 {
     justify-content: center;
 }
 .nav-menu li {
-    margin: 0 15px;
+    margin: 0; /* Ajustado para el nuevo menú */
+    position: relative; /* Necesario para el menú desplegable */
 }
 .nav-menu a {
     color: var(--color-blanco);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
-    padding: 10px 15px;
+    padding: 12px 20px; /* Más espaciado horizontal */
     border-radius: 20px;
     transition: var(--transicion-suave);
 }
@@ -81,6 +82,36 @@ header h1 {
     color: var(--color-texto); /* Texto oscuro para que se lea bien */
     font-weight: 700;
 }
+
+/* --- NUEVO: Estilos para el Menú Desplegable --- */
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: var(--color-primario-oscuro);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px var(--color-sombra);
+    z-index: 1;
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    border-radius: 0; /* Los items del submenú no necesitan ser redondeados individualmente */
+}
+
+/* Muestra el menú al pasar el ratón sobre el elemento li.dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 
 
 /* --- Contenedor Principal (GRID) --- */
@@ -132,18 +163,18 @@ header h1 {
 .btn-ticket {
     background-color: var(--color-terciario);
     color: var(--color-blanco);
-    border: none;
+    border: none; 
     padding: 12px 25px;
-    border-radius: 25px;
-    font-size: 1rem;
+    border-radius: 8px; /* Bordes menos redondeados, más modernos */
+    font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
     transition: var(--transicion-suave);
-    text-decoration: none;
+    text-decoration: none; 
     display: inline-block;
 }
 .btn-ticket:hover {
-    background-color: #E64A19; /* Un tono más oscuro de naranja */
+    background-color: var(--color-primario-oscuro); /* Un tono más oscuro, usando una variable */
     transform: scale(1.05);
 }
 
@@ -192,7 +223,10 @@ header h1 {
     border-radius: var(--border-radius-suave);
     box-shadow: 0 5px 15px var(--color-sombra);
     text-align: center;
-    border-top: 5px solid var(--color-primario);
+    border-top: 5px solid var(--color-primario); 
+}
+.pagina-contenido .btn-ticket {
+    margin-top: 20px;
 }
 .pagina-contenido h2 {
     font-size: 2rem;
@@ -211,12 +245,12 @@ header h1 {
     text-align: left;
 }
 .tabla-precios th {
-    background-color: #E0F7FA;
+    background-color: var(--color-fondo);
     color: var(--color-primario-oscuro);
     font-weight: 700;
 }
 .tabla-precios tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: var(--color-fondo);
 }
 .mapa-placeholder, .mapa-zoo-img {
     width: 100%;
@@ -238,7 +272,7 @@ header h1 {
 }
 
 
-/* ======== /* NUEVO: Estilos para Títulos de Categorías */ ======== */
+/* ======== /* NUEVO: Estilos para Títulos de Categorías ======== */
 .categoria-animales {
     /* Esta sección envuelve cada categoría */
     margin-top: 30px;
@@ -264,7 +298,7 @@ header h1 {
     background-color: var(--color-primario); /* Verde */
 }
 #omnivoros {
-    background-color: #5D76A9; /* Un azul más apagado y elegante */
+    background-color: var(--color-primario-oscuro); /* Reutilizando una variable existente */
 }
 
 /* Ajuste para que el grid no tenga un margen superior extra */
@@ -276,11 +310,78 @@ header h1 {
 /* ========================================================== */
 
 
+/* ======== NUEVO: Estilos para Ventana Modal de Pago ======== */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija para cubrir toda la pantalla */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite scroll si el contenido es muy largo */
+    background-color: rgba(0,0,0,0.6); /* Fondo negro semitransparente */
+    padding-top: 60px;
+}
+
+.modal-contenido {
+    background-color: var(--color-blanco);
+    margin: 5% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--border-radius-suave);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: animatetop 0.4s;
+    position: relative;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.cerrar-modal {
+    color: var(--color-gris-claro);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.payment-form {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+.payment-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    color: var(--color-primario-oscuro);
+}
+.payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--color-gris-claro);
+    border-radius: 5px;
+}
+
+
 /* --- Pie de Página --- */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: #aaa;
+    background-color: var(--color-texto);
+    color: var(--color-gris-claro);
     margin-top: 20px;
 }

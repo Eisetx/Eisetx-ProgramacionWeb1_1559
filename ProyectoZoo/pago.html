@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Reserva TerraFES</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>🦒 ¡Bienvenidos a la Reserva TerraFES! 🦓</h1>
+    </header>
+
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Animales</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="mapa.html">Mapa del Zoo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="pagina-contenido">
+            <h2>💳 Proceso de Pago 💳</h2>
+            <p>Completa tus datos para finalizar la compra de tus entradas.</p>
+
+            <form id="paymentForm" class="payment-form">
+                <label for="cardholder-name">Nombre del Titular</label>
+                <input type="text" id="cardholder-name" required placeholder="Juan Pérez">
+
+                <label for="card-number">Número de Tarjeta</label>
+                <input type="text" id="card-number" required placeholder="0000 0000 0000 0000" maxlength="19">
+
+                <label for="expiry-date">Fecha de Expiración</label>
+                <input type="text" id="expiry-date" required placeholder="MM/AA">
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" required placeholder="123" maxlength="3">
+
+                <button type="submit" class="btn-ticket">Pagar Ahora</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Reserva TerraFES. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        var form = document.getElementById("paymentForm");
+
+        form.onsubmit = function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+            alert("¡Gracias por tu compra! \nTu pago ha sido procesado exitosamente.");
+            form.reset(); // Limpia el formulario
+            // Redirige al usuario a la página de inicio después de la compra
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+</html>

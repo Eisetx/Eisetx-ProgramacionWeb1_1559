@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoo Fantástico - Inicio</title>
+    <title>Reserva TerraFES - Inicio</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <h1>🦒 ¡Bienvenidos al Zoo Fantástico! 🦓</h1>
+        <h1>🦒 ¡Bienvenidos a la Reserva TerraFES! 🦓</h1>
     </header>
 
     <nav class="nav-menu">
         <ul>
-            <li><a href="index.html" class="active">Animales</a></li>
-            <li><a href="precios.html">Precios</a></li>
+            <li class="dropdown">
+                <a href="index.html" class="active">Animales</a>
+                <ul class="dropdown-content">
+                    <li><a href="index.html#carnivoros">Carnívoros</a></li>
+                    <li><a href="index.html#herviboros">Herbívoros</a></li>
+                    <li><a href="index.html#omnivoros">Omnívoros</a></li>
+                </ul>
+            </li>
+            <li><a href="precios.html">Precios</a></li> 
             <li><a href="ubicacion.html">Ubicación</a></li>
             <li><a href="mapa.html">Mapa del Zoo</a></li>
         </ul>
@@ -31,57 +38,73 @@
                 <section class="grid-item">
                     <h2>León 🦁</h2>
                     <div class="foto-animal"><p>(Foto del león)</p></div>
-                    <p>El rey de la sabana.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Carne</p></div>
+                    <p>El rey de la sabana, conocido por su majestuosa melena.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Carne, principalmente de grandes mamíferos como cebras y ñus.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Sabanas y pastizales con clima cálido. Temp: 15-35°C.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Su rugido puede escucharse hasta a 8 kilómetros de distancia.</div>
                 </section>
                 
                 <section class="grid-item">
                     <h2>Tigre 🐅</h2>
                     <div class="foto-animal"><p>(Foto del tigre)</p></div>
-                    <p>Rayas majestuosas.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Carne</p></div>
+                    <p>El felino más grande, con un patrón de rayas único.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Carne, caza ciervos, jabalíes y búfalos.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Selvas tropicales y manglares. Requiere alta humedad y calor. Temp: 20-35°C.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> A diferencia de muchos felinos, son excelentes nadadores y disfrutan del agua.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Pingüino 🐧</h2>
                     <div class="foto-animal"><p>(Foto del pingüino)</p></div>
-                    <p>Elegante nadador.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Pescado (Carnívoro)</p></div>
+                    <p>Ave no voladora, pero un nadador excepcional.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Pescado, krill y calamares.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Costas y aguas muy frías. Necesita temperaturas bajas. Temp: -2 a 10°C.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Pueden beber agua salada gracias a una glándula especial que filtra la sal.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Serpiente 🐍</h2>
                     <div class="foto-animal"><p>(Foto de la serpiente)</p></div>
-                    <p>Silenciosa y colorida.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Roedores</p></div>
+                    <p>Reptil sin patas, con una gran diversidad de especies.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Roedores, aves y otros reptiles pequeños.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Desde desiertos hasta selvas. La temperatura y humedad varían según la especie.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> ¡Huelen con la lengua! Capturan partículas de olor y las llevan a un órgano en su paladar.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Cocodrilo 🐊</h2>
                     <div class="foto-animal"><p>(Foto del cocodrilo)</p></div>
-                    <p>Un reptil prehistórico.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Carne y pescado</p></div>
+                    <p>Un reptil semiacuático de apariencia prehistórica.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Carne y pescado. Caza desde el agua.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Ríos y lagos en climas tropicales. Requiere calor y alta humedad. Temp: 25-35°C.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> No pueden sacar la lengua, ya que está pegada al paladar inferior.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Lobo Gris 🐺</h2>
                     <div class="foto-animal"><p>(Foto del lobo)</p></div>
-                    <p>El líder de la manada.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Carne</p></div>
+                    <p>Un cazador social que vive y caza en manadas.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Carne, desde grandes presas como alces hasta roedores.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Bosques y tundras de climas fríos y templados. Adaptable a diversas temperaturas.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Corren sobre los dedos de sus patas, lo que les permite girar y detenerse rápidamente.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Guepardo 🐆</h2>
                     <div class="foto-animal"><p>(Foto del guepardo)</p></div>
-                    <p>El más veloz de todos.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Carne</p></div>
+                    <p>El animal terrestre más rápido del mundo.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Carne, principalmente gacelas e impalas.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Sabanas abiertas y secas. Necesita espacios amplios para correr. Clima cálido.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> A diferencia de otros grandes felinos, no pueden rugir, pero sí ronronean muy fuerte.</div>
                 </section>
                 
                 <section class="grid-item">
                     <h2>Hiena Manchada</h2>
                     <div class="foto-animal"><p>(Foto de la hiena)</p></div>
-                    <p>¡No para de reír!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Carne y carroña</p></div>
+                    <p>Conocida por su "risa", es una cazadora y carroñera muy eficiente.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Carne y carroña. Posee una de las mandíbulas más fuertes.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Sabanas y desiertos de África. Muy resistente a condiciones áridas.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Las hembras son más grandes, musculosas y agresivas que los machos.</div>
                 </section>
 
             </div> </section> <section class="categoria-animales">
@@ -91,57 +114,73 @@
                 <section class="grid-item">
                     <h2>Elefante 🐘</h2>
                     <div class="foto-animal"><p>(Foto del elefante)</p></div>
-                    <p>¡Memoria gigante!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Heno, frutas, hojas</p></div>
+                    <p>El mamífero terrestre más grande, con una memoria increíble.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Heno, frutas, hojas y cortezas. Pueden comer más de 150 kg al día.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Sabanas y selvas. Requieren mucho espacio y acceso a agua. Clima cálido.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Su trompa tiene más de 40,000 músculos, ¡más que todos los músculos del cuerpo humano juntos!</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Jirafa 🦒</h2>
                     <div class="foto-animal"><p>(Foto de la jirafa)</p></div>
-                    <p>El cuello más largo.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Hojas de acacia</p></div>
+                    <p>El animal más alto del mundo, gracias a su largo cuello.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Hojas de árboles altos, especialmente de acacias.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Sabanas arboladas de África. Clima cálido y seco.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Su lengua es de color azul oscuro o negro para evitar quemarse con el sol mientras come.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Cebra 🦓</h2>
                     <div class="foto-animal"><p>(Foto de la cebra)</p></div>
-                    <p>Un pijama de rayas.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Pasto y hierbas</p></div>
+                    <p>Famosa por su pelaje a rayas blancas y negras, único en cada individuo.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Pasto, hierbas y tallos.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Praderas y sabanas abiertas. Viven en grandes manadas.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Las rayas de cada cebra son únicas, como las huellas dactilares humanas.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Koala 🐨</h2>
                     <div class="foto-animal"><p>(Foto del koala)</p></div>
-                    <p>¡Experto en siestas!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Hojas de eucalipto</p></div>
+                    <p>Marsupial arborícola que duerme hasta 20 horas al día.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Hojas de eucalipto, de las cuales obtienen también su hidratación.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Bosques de eucalipto en Australia. Clima templado.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Tienen huellas dactilares casi idénticas a las de los seres humanos.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Rinoceronte 🦏</h2>
                     <div class="foto-animal"><p>(Foto del rinoceronte)</p></div>
-                    <p>Fuerte y robusto.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Pasto y plantas</p></div>
+                    <p>Grande y robusto, con uno o dos cuernos en el hocico.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Pasto, hojas y brotes de plantas.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Sabanas y pastizales. Necesitan acceso a lodo para proteger su piel.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Un grupo de rinocerontes en inglés se conoce como "crash" (choque).</div>
                 </section>
                 
                 <section class="grid-item">
                     <h2>Oso Panda 🐼</h2>
                     <div class="foto-animal"><p>(Foto del panda)</p></div>
-                    <p>¡Le encanta el bambú!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Bambú</p></div>
+                    <p>Un oso adorable y tranquilo, símbolo de la conservación.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Casi exclusivamente bambú (99% de su dieta).</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Bosques de bambú en montañas frías y húmedas de China. Temp: 10-20°C.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Tienen un "falso pulgar" que es un hueso de la muñeca modificado para agarrar el bambú.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Canguro 🦘</h2>
                     <div class="foto-animal"><p>(Foto del canguro)</p></div>
-                    <p>¡Saltos increíbles!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Pasto y hojas</p></div>
+                    <p>Marsupial australiano famoso por sus poderosas patas traseras para saltar.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Pasto, hojas y brotes.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Zonas áridas y semiáridas de Australia. Muy adaptable al calor.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> No pueden caminar hacia atrás debido a la forma de sus patas y su gran cola.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Hipopótamo 🦛</h2>
                     <div class="foto-animal"><p>(Foto del hipopótamo)</p></div>
-                    <p>Ama el agua.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Pasto (come de noche)</p></div>
+                    <p>Pasa la mayor parte del día en el agua para mantener su piel fresca.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Pasto, que consume durante la noche en tierra firme.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Ríos y lagos de África. Necesita agua profunda y pastizales cercanos.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Producen un líquido rojizo que actúa como protector solar y antibiótico natural.</div>
                 </section>
 
             </div> </section> <section class="categoria-animales">
@@ -151,49 +190,61 @@
                 <section class="grid-item">
                     <h2>Mono Tití 🐒</h2>
                     <div class="foto-animal"><p>(Foto del mono)</p></div>
-                    <p>¡Qué divertido!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Frutas e insectos</p></div>
+                    <p>Pequeño, ágil y muy social, vive en las copas de los árboles.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Frutas, insectos, savia y flores.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Selvas tropicales de América del Sur. Clima cálido y muy húmedo.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> A menudo tienen gemelos, algo muy raro entre los primates.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Oso Pardo 🐻</h2>
                     <div class="foto-animal"><p>(Foto del oso)</p></div>
-                    <p>¡Ama la miel y el salmón!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Pescado, bayas, miel</p></div>
+                    <p>Un oso grande y poderoso que puede ser muy adaptable.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Pescado (salmón), bayas, raíces, miel e insectos.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Bosques y montañas del hemisferio norte. Climas templados a fríos.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Pueden correr tan rápido como un caballo en distancias cortas (hasta 56 km/h).</div>
                 </section>
 
                 <section class="grid-item">
-                    <h2>Chimpancé  chimpanzee</h2>
+                    <h2>Chimpancé 🐵</h2>
                     <div class="foto-animal"><p>(Foto del chimpancé)</p></div>
-                    <p>¡Muy inteligente!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Frutas, hojas, insectos</p></div>
+                    <p>Uno de nuestros parientes más cercanos, conocido por su alta inteligencia.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Frutas, hojas, insectos y ocasionalmente carne.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Selvas y bosques húmedos de África. Clima tropical.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Son capaces de fabricar y utilizar herramientas, como ramas para sacar termitas.</div>
                 </section>
 
                 <section class="grid-item">
-                    <h2>Suricata </h2>
+                    <h2>Suricata</h2>
                     <div class="foto-animal"><p>(Foto de la suricata)</p></div>
-                    <p>Siempre vigilando.</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Insectos y plantas</p></div>
+                    <p>Pequeño mamífero que vive en colonias y tiene un centinela vigilando.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Insectos, larvas, pequeños reptiles y plantas.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Desiertos y sabanas del sur de África. Clima muy cálido y seco.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Son inmunes al veneno de ciertos escorpiones que cazan para alimentarse.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Pavo Real 🦚</h2>
                     <div class="foto-animal"><p>(Foto del pavo real)</p></div>
-                    <p>¡Qué plumas tan bellas!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>Semillas e insectos</p></div>
+                    <p>El macho exhibe un espectacular abanico de plumas para cortejar a la hembra.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> Semillas, granos, insectos y pequeños reptiles.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Bosques y zonas de matorral en la India. Clima cálido.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Solo los machos son "pavos reales"; las hembras se llaman "pavas reales" y son de colores más apagados.</div>
                 </section>
 
                 <section class="grid-item">
                     <h2>Cerdo 🐖</h2>
                     <div class="foto-animal"><p>(Foto del cerdo)</p></div>
-                    <p>¡Le encanta el lodo!</p>
-                    <div class="info-animal"><strong>Dieta:</strong> <p>¡De todo!</p></div>
+                    <p>Animal muy inteligente al que le encanta revolcarse en el lodo para refrescarse.</p>
+                    <div class="info-animal"><strong>Dieta:</strong> ¡De todo! Raíces, frutas, restos de comida, etc.</div>
+                    <div class="info-animal"><strong>Hábitat:</strong> Adaptable a muchos climas, prefiere zonas boscosas y de matorral.</div>
+                    <div class="info-animal"><strong>Dato Curioso:</strong> Se consideran uno de los animales domésticos más inteligentes, incluso más que los perros.</div>
                 </section>
 
             </div> </section> </main>
 
     <footer>
-        <p>© 2025 Zoo Fantástico. Todos los derechos reservados.</p>
+        <p>© 2025 Reserva TerraFES. Todos los derechos reservados.</p>
     </footer>
 
 </body>
