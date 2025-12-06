@@ -1,15 +1,16 @@
 /* --- Variables Globales (Custom Properties) --- */
 :root {
+    /* Paleta de colores profesional y moderna */
     --font-principal: 'Nunito', sans-serif;
-    --color-primario: #2E7D32; /* Verde más oscuro y profesional */
-    --color-primario-oscuro: #1B5E20; /* Verde aún más oscuro para contraste */
-    --color-secundario: #FFC107; /* Amarillo de acento */
-    --color-terciario: #F57C00; /* Naranja más refinado */
-    --color-fondo: #f7fdf7; /* Un blanco hueso muy claro */
-    --color-texto: #333;
+    --color-primario: #4CAF50;      /* Verde natural y fresco */
+    --color-primario-oscuro: #388E3C; /* Verde más oscuro para hover */
+    --color-navegacion: #36A2EB;    /* Azul cielo brillante */
+    --color-acento: #FFCE56;     /* Amarillo dorado para acentos */
+    --color-fondo: #F0F8FF;         /* Azul muy claro y suave (AliceBlue) */
+    --color-texto: #333;         /* Gris oscuro para buena legibilidad */
     --color-blanco: #ffffff;
-    --color-gris-claro: #ddd;
-    --color-sombra: rgba(0, 0, 0, 0.06); /* Sombra más sutil */
+    --color-gris-claro: #EAEAEA;
+    --color-sombra: rgba(54, 162, 235, 0.2); /* Sombra azulada suave */
     --border-radius-suave: 15px;
     --transicion-suave: all 0.3s ease-in-out;
 }
@@ -21,10 +22,11 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
     line-height: 1.6;
+    scroll-behavior: smooth; /* NUEVO: Para un desplazamiento suave al hacer clic en los filtros */
 }
 
 h1, h2 {
-    color: var(--color-primario-oscuro);
+    color: var(--color-primario);
     font-weight: 700;
 }
 
@@ -34,7 +36,7 @@ header {
     color: var(--color-blanco);
     text-align: center;
     padding: 20px 10px;
-    border-bottom: 5px solid var(--color-secundario);
+    border-bottom: 4px solid var(--color-acento);
 }
 header h1 {
     color: var(--color-blanco);
@@ -45,7 +47,7 @@ header h1 {
 
 /* --- Estilos del Menú de Navegación --- */
 .nav-menu {
-    background-color: var(--color-primario-oscuro);
+    background-color: var(--color-navegacion);
     padding: 12px 0; /* Un poco más de espacio vertical */
     text-align: center;
     position: sticky; 
@@ -78,7 +80,7 @@ header h1 {
 
 /* Estilo para la página activa en el menú */
 .nav-menu a.active {
-    background-color: var(--color-secundario); /* Color amarillo de acento */
+    background-color: var(--color-acento); /* Color amarillo de acento */
     color: var(--color-texto); /* Texto oscuro para que se lea bien */
     font-weight: 700;
 }
@@ -87,7 +89,7 @@ header h1 {
 .dropdown-content {
     display: none; /* Oculto por defecto */
     position: absolute;
-    background-color: var(--color-primario-oscuro);
+    background-color: var(--color-navegacion);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px var(--color-sombra);
     z-index: 1;
@@ -111,6 +113,41 @@ header h1 {
     display: block;
 }
 
+/* ======== NUEVO: Barra de Filtros para Animales ======== */
+.animal-filter-nav {
+    background-color: #e3f2fd; /* Un azul aún más claro para la barra de filtros */
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0d9c4; /* Borde sutil */
+    position: sticky;
+    top: 68px; /* Altura del nav-menu principal (ajustar si cambia) */
+    z-index: 99; /* Por debajo del menú principal */
+}
+
+.animal-filter-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre botones */
+}
+
+.animal-filter-nav a {
+    display: block;
+    padding: 8px 20px;
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 20px;
+    border: 1px solid var(--color-primario);
+    transition: var(--transicion-suave);
+}
+.animal-filter-nav a:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
 
 
 
@@ -156,12 +193,12 @@ header h1 {
 }
 .grid-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 15px var(--color-sombra);
+    box-shadow: 0 12px 24px rgba(76, 175, 80, 0.4); /* Sombra verde al pasar el ratón */
 }
 
 /* Botón de entradas */
 .btn-ticket {
-    background-color: var(--color-terciario);
+    background-color: #FF9F40; /* Naranja pastel */
     color: var(--color-blanco);
     border: none; 
     padding: 12px 25px;
@@ -183,24 +220,24 @@ header h1 {
     width: 100%;
     height: 200px;
     border-radius: 10px;
-    margin-bottom: 15px;
-    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+    margin-bottom: 15px; /* Mantenemos el margen inferior */
+    overflow: hidden; /* Esencial para que la imagen no se desborde */
 }
 .foto-animal img {
+    /* La imagen se escala para ser tan ancha como el contenedor */
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 7px;
+    object-fit:contain; /* NUEVO: Asegura que la imagen cubra el contenedor sin deformarse */
 }
 
 /* --- Info de Hábitat y Cuidados (en la tarjeta) --- */
 .info-animal {
     margin-top: 15px;
     text-align: left;
-    padding: 10px;
-    background-color: var(--color-fondo);
+    padding: 0;
+    background-color: transparent;
     border-radius: 8px;
-    border-left: 5px solid var(--color-secundario);
+    border-left: none;
 }
 .info-animal strong {
     color: var(--color-primario-oscuro);
@@ -245,12 +282,12 @@ header h1 {
     text-align: left;
 }
 .tabla-precios th {
-    background-color: var(--color-fondo);
+    background-color: var(--color-navegacion);
     color: var(--color-primario-oscuro);
     font-weight: 700;
 }
 .tabla-precios tr:nth-child(even) {
-    background-color: var(--color-fondo);
+    background-color: #e3f2fd;
 }
 .mapa-placeholder, .mapa-zoo-img {
     width: 100%;
@@ -272,35 +309,32 @@ header h1 {
 }
 
 
-/* ======== /* NUEVO: Estilos para Títulos de Categorías ======== */
+/* ======== NUEVO: Estilos para Títulos de Categorías ======== */
 .categoria-animales {
     /* Esta sección envuelve cada categoría */
     margin-top: 30px;
 }
 
 .categoria-animales h2 {
-    /* Este es el título de la categoría (ej. Carnívoros) */
+    /* ESTILO MODIFICADO: Ahora es un título de sección normal */
     font-size: 2.5rem;
     text-align: center;
-    color: var(--color-blanco); /* Texto blanco */
-    padding: 15px;
-    border-radius: var(--border-radius-suave);
-    max-width: 1200px; /* Ancho del grid */
-    margin: 20px auto 0 auto; /* Centrado */
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    color: #FF9F40; /* Naranja pastel */
+    margin: 40px auto 20px auto; /* Más margen superior para separar secciones */
+    position: relative;
+    padding-bottom: 10px;
 }
-
-/* Colores para cada categoría */
-#carnivoros {
-    background-color: var(--color-terciario); /* Naranja/Rojo */
+/* Línea decorativa debajo del título */
+.categoria-animales h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-acento);
 }
-#herviboros {
-    background-color: var(--color-primario); /* Verde */
-}
-#omnivoros {
-    background-color: var(--color-primario-oscuro); /* Reutilizando una variable existente */
-}
-
 /* Ajuste para que el grid no tenga un margen superior extra */
 .categoria-animales .grid-container {
     margin-top: 0;
@@ -380,8 +414,9 @@ header h1 {
 /* --- Pie de Página --- */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: var(--color-texto);
-    color: var(--color-gris-claro);
+    padding: 25px;
+    background-color: var(--color-navegacion);
+    color: var(--color-blanco);
     margin-top: 20px;
+    border-top: 4px solid var(--color-acento);
 }
