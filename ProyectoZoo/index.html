@@ -244,6 +244,29 @@
 
             </div> </section> </main>
 
+    <section class="categoria-animales">
+        <h2 id="boletos">Compra tus Boletos</h2>
+        <div class="form-container">
+            <p>¡Planifica tu visita! Selecciona tus boletos y prepárate para una aventura inolvidable.</p>
+            <!-- Formulario para simular la compra de boletos. Los datos se envían a una página de confirmación. -->
+            <form action="confirmacion.html" method="GET" class="ticket-form">
+                <div class="form-group">
+                    <label for="adultos">Boletos Adulto ($15 c/u):</label>
+                    <input type="number" id="adultos" name="adultos" min="0" value="1" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="ninos">Boletos Niño ($10 c/u):</label>
+                    <input type="number" id="ninos" name="ninos" min="0" value="0" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha de Visita:</label>
+                    <input type="date" id="fecha" name="fecha" class="form-control">
+                </div>
+                <button type="submit" class="btn-submit">Simular Compra</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <p>© 2025 Reserva TerraFES. Todos los derechos reservados.</p>
     </footer>

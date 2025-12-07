@@ -1,13 +1,12 @@
 /* --- Variables Globales (Custom Properties) --- */
 :root {
-    /* Paleta de colores profesional y moderna */
     --font-principal: 'Nunito', sans-serif;
-    --color-primario: #4CAF50;      /* Verde natural y fresco */
-    --color-primario-oscuro: #388E3C; /* Verde más oscuro para hover */
-    --color-navegacion: #36A2EB;    /* Azul cielo brillante */
-    --color-acento: #FFCE56;     /* Amarillo dorado para acentos */
-    --color-fondo: #F0F8FF;         /* Azul muy claro y suave (AliceBlue) */
-    --color-texto: #333;         /* Gris oscuro para buena legibilidad */
+    --color-primario: #4CAF50;
+    --color-primario-oscuro: #388E3C;
+    --color-navegacion: #36A2EB;
+    --color-acento: #FFCE56;
+    --color-fondo: #F0F8FF;
+    --color-texto: #333;
     --color-blanco: #ffffff;
     --color-gris-claro: #EAEAEA;
     --color-sombra: rgba(54, 162, 235, 0.2); /* Sombra azulada suave */
@@ -22,7 +21,7 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
     line-height: 1.6;
-    scroll-behavior: smooth; /* NUEVO: Para un desplazamiento suave al hacer clic en los filtros */
+    scroll-behavior: smooth; /* Activa el desplazamiento suave en la página */
 }
 
 h1, h2 {
@@ -48,7 +47,7 @@ header h1 {
 /* --- Estilos del Menú de Navegación --- */
 .nav-menu {
     background-color: var(--color-navegacion);
-    padding: 12px 0; /* Un poco más de espacio vertical */
+    padding: 12px 0;
     text-align: center;
     position: sticky; 
     top: 0;
@@ -62,30 +61,28 @@ header h1 {
     justify-content: center;
 }
 .nav-menu li {
-    margin: 0; /* Ajustado para el nuevo menú */
-    position: relative; /* Necesario para el menú desplegable */
+    margin: 0;
+    position: relative; /* Requerido para el menú desplegable */
 }
 .nav-menu a {
     color: var(--color-blanco);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
-    padding: 12px 20px; /* Más espaciado horizontal */
+    padding: 12px 20px;
     border-radius: 20px;
     transition: var(--transicion-suave);
 }
 .nav-menu a:hover {
     background-color: var(--color-primario);
 }
-
-/* Estilo para la página activa en el menú */
 .nav-menu a.active {
-    background-color: var(--color-acento); /* Color amarillo de acento */
-    color: var(--color-texto); /* Texto oscuro para que se lea bien */
+    background-color: var(--color-acento);
+    color: var(--color-texto);
     font-weight: 700;
 }
 
-/* --- NUEVO: Estilos para el Menú Desplegable --- */
+/* --- Estilos para el Menú Desplegable --- */
 .dropdown-content {
     display: none; /* Oculto por defecto */
     position: absolute;
@@ -105,7 +102,7 @@ header h1 {
     display: block;
     text-align: left;
     font-size: 1rem;
-    border-radius: 0; /* Los items del submenú no necesitan ser redondeados individualmente */
+    border-radius: 0;
 }
 
 /* Muestra el menú al pasar el ratón sobre el elemento li.dropdown */
@@ -113,14 +110,14 @@ header h1 {
     display: block;
 }
 
-/* ======== NUEVO: Barra de Filtros para Animales ======== */
+/* --- Barra de Filtros para Animales --- */
 .animal-filter-nav {
-    background-color: #e3f2fd; /* Un azul aún más claro para la barra de filtros */
+    background-color: #e3f2fd;
     padding: 10px 0;
     text-align: center;
-    border-bottom: 1px solid #e0d9c4; /* Borde sutil */
+    border-bottom: 1px solid #e0d9c4;
     position: sticky;
-    top: 68px; /* Altura del nav-menu principal (ajustar si cambia) */
+    top: 68px; /* Debe coincidir con la altura del nav-menu principal */
     z-index: 99; /* Por debajo del menú principal */
 }
 
@@ -129,8 +126,8 @@ header h1 {
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 15px; /* Espacio entre botones */
+    justify-content: center; 
+    gap: 15px;
 }
 
 .animal-filter-nav a {
@@ -155,23 +152,23 @@ header h1 {
 .grid-container {
     display: grid;
     
-    /* 1. MÓVIL (Mobile-First): 1 columna por defecto */
+    /* MÓVIL (Mobile-First): 1 columna por defecto */
     grid-template-columns: 1fr;
     
     gap: 25px;
     padding: 25px;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto; 
 }
 
-/* 2. TABLET: 2 columnas */
+/* TABLET: 2 columnas */
 @media (min-width: 600px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* 3. ESCRITORIO: 3 columnas (Tu petición) */
+/* ESCRITORIO: 3 columnas */
 @media (min-width: 900px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
@@ -193,16 +190,16 @@ header h1 {
 }
 .grid-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(76, 175, 80, 0.4); /* Sombra verde al pasar el ratón */
+    box-shadow: 0 12px 24px rgba(76, 175, 80, 0.4);
 }
 
 /* Botón de entradas */
 .btn-ticket {
-    background-color: #FF9F40; /* Naranja pastel */
+    background-color: #FF9F40;
     color: var(--color-blanco);
     border: none; 
     padding: 12px 25px;
-    border-radius: 8px; /* Bordes menos redondeados, más modernos */
+    border-radius: 8px;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
@@ -211,7 +208,7 @@ header h1 {
     display: inline-block;
 }
 .btn-ticket:hover {
-    background-color: var(--color-primario-oscuro); /* Un tono más oscuro, usando una variable */
+    background-color: var(--color-primario-oscuro);
     transform: scale(1.05);
 }
 
@@ -219,15 +216,15 @@ header h1 {
 .foto-animal {
     width: 100%;
     height: 200px;
-    border-radius: 10px;
-    margin-bottom: 15px; /* Mantenemos el margen inferior */
-    overflow: hidden; /* Esencial para que la imagen no se desborde */
+    border-radius: 10px; 
+    margin-bottom: 15px;
+    overflow: hidden;
 }
 .foto-animal img {
     /* La imagen se escala para ser tan ancha como el contenedor */
     width: 100%;
     height: 100%;
-    object-fit:contain; /* NUEVO: Asegura que la imagen cubra el contenedor sin deformarse */
+    object-fit:contain; /* Asegura que la imagen se ajuste sin deformarse */
 }
 
 /* --- Info de Hábitat y Cuidados (en la tarjeta) --- */
@@ -241,14 +238,14 @@ header h1 {
 }
 .info-animal strong {
     color: var(--color-primario-oscuro);
-    font-size: 1.1rem;
-    display: inline-block; /* Para que el párrafo se ponga al lado */
+    font-size: 1.1rem; 
+    display: inline-block;
     margin-right: 5px;
 }
 .info-animal p {
     margin: 0;
     font-size: 0.95rem;
-    display: inline; /* Para que continúe en la misma línea */
+    display: inline;
 }
 
 /* --- Estilos para las páginas de contenido (precios, etc.) --- */
@@ -304,22 +301,20 @@ header h1 {
 .mapa-zoo-img img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit:contain;
     border-radius: 7px;
 }
 
 
-/* ======== NUEVO: Estilos para Títulos de Categorías ======== */
+/* --- Estilos para Títulos de Categorías --- */
 .categoria-animales {
-    /* Esta sección envuelve cada categoría */
     margin-top: 30px;
 }
 
 .categoria-animales h2 {
-    /* ESTILO MODIFICADO: Ahora es un título de sección normal */
     font-size: 2.5rem;
     text-align: center;
-    color: #FF9F40; /* Naranja pastel */
+    color: #FF9F40;
     margin: 40px auto 20px auto; /* Más margen superior para separar secciones */
     position: relative;
     padding-bottom: 10px;
@@ -335,16 +330,13 @@ header h1 {
     height: 4px;
     background-color: var(--color-acento);
 }
-/* Ajuste para que el grid no tenga un margen superior extra */
 .categoria-animales .grid-container {
     margin-top: 0;
     padding-top: 25px;
-    /* Hereda el max-width, así que está bien */
 }
-/* ========================================================== */
 
 
-/* ======== NUEVO: Estilos para Ventana Modal de Pago ======== */
+/* --- Estilos para Ventana Modal de Pago --- */
 .modal {
     display: none; /* Oculto por defecto */
     position: fixed; /* Posición fija para cubrir toda la pantalla */
